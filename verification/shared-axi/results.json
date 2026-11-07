@@ -1,0 +1,171 @@
+{
+  "official_base": "a6b1d6657c03998b6df0baf905d7babd006ba614",
+  "author_head": "ac6a0d088904264fa5be17bd6d774e9c935d1d68",
+  "tool": "VCS W-2024.09-SP1",
+  "tb_sha256": "c7ad26f3eaca8fcb7f7afab717c7f2bc06b935af99b4bd94abe856928a0cc674",
+  "runs": [
+    {
+      "variant": "base",
+      "shared": 0,
+      "decouple_aw": 0,
+      "fault_injection": false,
+      "classification": "PASS",
+      "summary": "SHARED_AXI_DONE shared=0 decouple_aw=0 checks=4096 errors=0 complete=1 AR=1 AW=1 R=8 W=8 B=1",
+      "progress": [],
+      "log_sha256": "06f8bc5c0f4d1b25d6ff827d3981148357be932c059d80bfdb9bad650a962dd2",
+      "simv_sha256": "c446d0a0cd3e3261fe60aa2233c5b3775f1ffb19890c454328483166ff7da4dd"
+    },
+    {
+      "variant": "base",
+      "shared": 0,
+      "decouple_aw": 1,
+      "fault_injection": false,
+      "classification": "PASS",
+      "summary": "SHARED_AXI_DONE shared=0 decouple_aw=1 checks=4096 errors=0 complete=1 AR=1 AW=1 R=8 W=8 B=1",
+      "progress": [],
+      "log_sha256": "52b71e1539e888b3f8c879caf283dd01696f5ea28e016a66c9ba70d99ab231e3",
+      "simv_sha256": "c446d0a0cd3e3261fe60aa2233c5b3775f1ffb19890c454328483166ff7da4dd"
+    },
+    {
+      "variant": "base",
+      "shared": 1,
+      "decouple_aw": 0,
+      "fault_injection": false,
+      "classification": "DEADLOCK_AT_FINITE_HDL_LIMIT",
+      "summary": "SHARED_AXI_DEADLINE shared=1 decouple_aw=0 complete=0 AR=1 AW=0 R=3 W=0 B=0 reading=1 writing=0 r_ready=0 w_valid=1 ar_valid=0 ar_ready=0 aw_valid=1 aw_ready=0",
+      "progress": [
+        "SHARED_AXI_PROGRESS complete=0 AR=1 AW=0 R=3 W=0 B=0"
+      ],
+      "log_sha256": "fc9f7566786920ad0335844a3c464a2c1c9716d7b5d3449bdadb6b75b0f14ddf",
+      "simv_sha256": "c446d0a0cd3e3261fe60aa2233c5b3775f1ffb19890c454328483166ff7da4dd"
+    },
+    {
+      "variant": "base",
+      "shared": 1,
+      "decouple_aw": 1,
+      "fault_injection": false,
+      "classification": "DEADLOCK_AT_FINITE_HDL_LIMIT",
+      "summary": "SHARED_AXI_DEADLINE shared=1 decouple_aw=1 complete=0 AR=1 AW=0 R=3 W=0 B=0 reading=1 writing=0 r_ready=0 w_valid=1 ar_valid=0 ar_ready=0 aw_valid=1 aw_ready=0",
+      "progress": [
+        "SHARED_AXI_PROGRESS complete=0 AR=1 AW=0 R=3 W=0 B=0"
+      ],
+      "log_sha256": "da95d5d197498c5154a9dcb55913f2fbdef4d5ec7e11c6337cd594f424ed85b1",
+      "simv_sha256": "c446d0a0cd3e3261fe60aa2233c5b3775f1ffb19890c454328483166ff7da4dd"
+    },
+    {
+      "variant": "base",
+      "shared": 0,
+      "decouple_aw": 0,
+      "fault_injection": true,
+      "classification": "EXPECTED_DATA_CHECK_REJECTION",
+      "summary": "SHARED_AXI_DONE shared=0 decouple_aw=0 checks=4096 errors=1 complete=1 AR=1 AW=1 R=8 W=8 B=1",
+      "progress": [],
+      "log_sha256": "7f598b358291b8722685860a69104b69f463be93578dc433f3bf448ce58ec320",
+      "simv_sha256": "c446d0a0cd3e3261fe60aa2233c5b3775f1ffb19890c454328483166ff7da4dd"
+    },
+    {
+      "variant": "author227",
+      "shared": 0,
+      "decouple_aw": 0,
+      "fault_injection": false,
+      "classification": "PASS",
+      "summary": "SHARED_AXI_DONE shared=0 decouple_aw=0 checks=4096 errors=0 complete=1 AR=4 AW=4 R=8 W=8 B=4",
+      "progress": [],
+      "log_sha256": "153a495b253f40d432abbe6bc23b838e5ba5c4a7c119318b117d9af4febd03d5",
+      "simv_sha256": "c28ccdc2cc515a2a49959e1a7235d389ac573731d45dae8bda1ce0300f9ecdfe"
+    },
+    {
+      "variant": "author227",
+      "shared": 0,
+      "decouple_aw": 1,
+      "fault_injection": false,
+      "classification": "PASS",
+      "summary": "SHARED_AXI_DONE shared=0 decouple_aw=1 checks=4096 errors=0 complete=1 AR=4 AW=4 R=8 W=8 B=4",
+      "progress": [],
+      "log_sha256": "861f4d94a241e211d732dcfa4e4a430d0b25b13df498365855fef27c9a9d44bc",
+      "simv_sha256": "c28ccdc2cc515a2a49959e1a7235d389ac573731d45dae8bda1ce0300f9ecdfe"
+    },
+    {
+      "variant": "author227",
+      "shared": 1,
+      "decouple_aw": 0,
+      "fault_injection": false,
+      "classification": "PASS",
+      "summary": "SHARED_AXI_DONE shared=1 decouple_aw=0 checks=4096 errors=0 complete=1 AR=4 AW=4 R=8 W=8 B=4",
+      "progress": [],
+      "log_sha256": "58bd65cc6e3f1e670de57a56c4e8abeffd823394725e41bc7cad9423e072b226",
+      "simv_sha256": "c28ccdc2cc515a2a49959e1a7235d389ac573731d45dae8bda1ce0300f9ecdfe"
+    },
+    {
+      "variant": "author227",
+      "shared": 1,
+      "decouple_aw": 1,
+      "fault_injection": false,
+      "classification": "DEADLOCK_AT_FINITE_HDL_LIMIT",
+      "summary": "SHARED_AXI_DEADLINE shared=1 decouple_aw=1 complete=0 AR=1 AW=2 R=2 W=2 B=1 reading=0 writing=1 r_ready=1 w_valid=0 ar_valid=1 ar_ready=0 aw_valid=0 aw_ready=0",
+      "progress": [
+        "SHARED_AXI_PROGRESS complete=0 AR=1 AW=2 R=2 W=2 B=1"
+      ],
+      "log_sha256": "143ebb8b61ba2fb7c149988e98c81ed4905bfe08b44eb6f79f5db33aee3ef9e3",
+      "simv_sha256": "c28ccdc2cc515a2a49959e1a7235d389ac573731d45dae8bda1ce0300f9ecdfe"
+    },
+    {
+      "variant": "author227",
+      "shared": 0,
+      "decouple_aw": 0,
+      "fault_injection": true,
+      "classification": "EXPECTED_DATA_CHECK_REJECTION",
+      "summary": "SHARED_AXI_DONE shared=0 decouple_aw=0 checks=4096 errors=1 complete=1 AR=4 AW=4 R=8 W=8 B=4",
+      "progress": [],
+      "log_sha256": "4b009e61f5554aced805ff4effb8815279e2f430e11052673ace8860deecc3ee",
+      "simv_sha256": "c28ccdc2cc515a2a49959e1a7235d389ac573731d45dae8bda1ce0300f9ecdfe"
+    }
+  ],
+  "limits": "100 us HDL; 60s wall each",
+  "preparation_corrections": "Official generated compute header; separate typedef declarations; locked deprecated delta_counter added to unit list. Initial byte pattern repeated at source/destination; strengthened high address mix and repeated all eight runs plus two data-check negatives. Old logs and old results remain. No production RTL changed. Independent review requested registered rather than cross-port combinational arbitration. Changed only TB arbiter, reran all eight comparisons and two rejection controls as v3; v2 retained and not relabelled. Final independent review added exact complete_count=1 and unknown-final-state rejection; all eight comparisons and two controls repeated as v4, previous v3 retained.",
+  "fabric": "Registered AW-priority grant; no READY combinational path from any AXI request input",
+  "hardware_dependencies": [
+    {
+      "name": "apb",
+      "revision": "6ae8bf8d5eab5dc70d032231c01ab95e1c5774b9",
+      "url": "https://github.com/pulp-platform/apb",
+      "archive_sha256": "f7944af0b20881b3dd12106effd1b0c136b3fb1b36e4cd7425e275cd26ec36a6"
+    },
+    {
+      "name": "axi",
+      "revision": "0ccc838fe06aeeb857eb83c6be9a915c4bf99566",
+      "url": "https://github.com/pulp-platform/axi",
+      "archive_sha256": "2d9a0da264deb5319eaedd130cdd36d6ef5d95b35ae1ca32bd180aa11a0c3fd3"
+    },
+    {
+      "name": "axi_stream",
+      "revision": "ce1547861f99ab3d8834d04aa36d2d4184a28df7",
+      "url": "https://github.com/pulp-platform/axi_stream",
+      "archive_sha256": "231fdf047ada75761b1ec5be430f35827dc4f11efbae56bba68237a3c34635a4"
+    },
+    {
+      "name": "common_cells",
+      "revision": "63b7c50d43e462b59506f69d341ff1e40202866d",
+      "url": "https://github.com/pulp-platform/common_cells",
+      "archive_sha256": "30a305a95f4efefad3c14ac16e0f58f11b94b234ea03854bcf330e2353ed8f6e"
+    },
+    {
+      "name": "common_verification",
+      "revision": "fb1885f48ea46164a10568aeff51884389f67ae3",
+      "url": "https://github.com/pulp-platform/common_verification",
+      "archive_sha256": "c340d5f4f7bfb149c2a696d9cfef4cd11ef72352c6a17a3be91fce6e996e89c8"
+    },
+    {
+      "name": "obi",
+      "revision": "b69af4aa00630efd14b1c5cbf9bac977f23ce840",
+      "url": "https://github.com/pulp-platform/obi",
+      "archive_sha256": "c7a030ee2da8b9009dbd4c7a5549b34731bc3cbb4954cd526bf55dad0424f278"
+    },
+    {
+      "name": "tech_cells_generic",
+      "revision": "3a3de73632a06826b1bd9c65a0a2e92b32016845",
+      "url": "https://github.com/pulp-platform/tech_cells_generic",
+      "archive_sha256": "e89d929cef36a56478ba8ce457cfc9d98bf806c73bba1a8100b31718c409024e"
+    }
+  ]
+}
