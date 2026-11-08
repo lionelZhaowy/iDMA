@@ -39,9 +39,10 @@ permit. Both admission decisions use only the registered count.
 
 ## Actual results
 
-The original and candidate use the same frozen legacy TB and the same extended
-TB. They instantiate the real generated idma_backend_rw_axi. The independent
-memory fabric has registered AW-priority arbitration for its shared-port mode.
+The original and candidate use the same frozen shared-port reproduction test
+and coupled-order test. They instantiate the real generated idma_backend_rw_axi.
+The independent memory fabric has registered AW-priority arbitration for its
+shared-port mode.
 It does not replace the DMA. Each completed test compares every one of 4096
 memory bytes, including all source bytes, destination bytes, and guards.
 
@@ -57,7 +58,7 @@ memory bytes, including all source bytes, destination bytes, and guards.
 | AR/AW ready open together with no earlier permit | Data correct; extra ORDER_POLICY rejected | Data correct; AR accepted one cycle before AW |
 | NumAx=1 | Rejected at time zero | Same rejection |
 
-The extended tests also reach permit peaks 2 and 3, exercise AR/AW/W backpressure,
+The coupled-order tests also reach permit peaks 2 and 3, exercise AR/AW/W backpressure,
 and check known channel controls and stable VALID/payload while stalled. The
 queued tests observe packets whose eligibility differs from the current input
 job. They check the candidate's actual registered permit count and packet tags
@@ -83,6 +84,10 @@ All final runs have a 100 us HDL limit and a 60-second wall limit. A timeout is
 not PASS. The shared-port wait diagnoses keep the same transaction counts at
 90 and 100 us. [results.json](results.json) records every final call and log SHA.
 Earlier preparation failures remain separate and are not relabelled as passes.
+The result groups and case labels use `shared_axi` for the shared-port reproduction
+and `coupled_order` for the queued-order regression. These labels identify the
+recorded runs; their log SHA256 values, arguments, summaries, counts and result
+classifications are unchanged.
 
 The public TB copies remove one final empty line from each recorded TB.
 All non-whitespace bytes are identical. The recorded input SHA256 values remain
@@ -134,15 +139,15 @@ TEST_DIR=/absolute/path/to/this-contribution/test
 ```
 
 Compile in a new empty build directory. Select tb_shared_axi for the frozen test
-or tb_coupled_axi_order for the extended test. Set the matching source name and
-TOP. Set EXTRA only for extended tests; set CANDIDATE only for the candidate's
-extended build. It enables passive internal checks in the TB, not DUT logic.
+or tb_coupled_axi_order for the coupled-order test. Set the matching source name and
+TOP. Set EXTRA only for coupled-order tests; set CANDIDATE only for the candidate's
+coupled-order build. It enables passive internal checks in the TB, not DUT logic.
 
 ```sh
 TOP=tb_coupled_axi_order
 EXTRA='+define+TEST_NUM_AX=3 +define+TEST_BUFFER_DEPTH=8'
 CANDIDATE=                         # author
-# CANDIDATE=+define+CANDIDATE_PERMIT # candidate, extended TB only
+# CANDIDATE=+define+CANDIDATE_PERMIT # candidate, coupled-order TB only
 vcs -full64 -sverilog -timescale=1ns/1ps -assert svaext +lint=all \
   +incdir+"$CC_DIR/include" +incdir+"$AXI_DIR/include" \
   +incdir+"$IDMA_DIR/target/rtl/include" +incdir+"$IDMA_DIR/src/include" \
@@ -167,7 +172,7 @@ timeout 60 /absolute/build/simv +SHARED=0 +DECOUPLE_AW=0 > run.log 2>&1
 # A separate rejection control adds +CORRUPT_COPY to SHARED=0/AW=0.
 ```
 
-For the extended TB, compile NumAx=2 and 3 with BufferDepth=8. Each run gets a
+For the coupled-order TB, compile NumAx=2 and 3 with BufferDepth=8. Each run gets a
 new output directory. Run these cases on both author and candidate:
 
 ```sh
@@ -185,7 +190,7 @@ timeout 60 /absolute/build/simv +SCENARIO=1 +SHARED=0 +DEADLOCK_FREE=1 +BACKPRES
 Also compile NumAx=3/BufferDepth=3. Run SCENARIO=0 with DEADLOCK_FREE=0,
 BACKPRESSURE=0 and all four SHARED/AW combinations. Repeat SHARED=1/AW=1 with
 DEADLOCK_FREE=1. Compile NumAx=1/BufferDepth=3 for the expected parameter
-rejection. The extended one-byte rejection uses the candidate's NumAx=3,
+rejection. The coupled-order one-byte rejection uses the candidate's NumAx=3,
 BufferDepth=8, SCENARIO=1, SHARED=0, DEADLOCK_FREE=1, BACKPRESSURE=1 and
 DECOUPLE_AW=1, with +CORRUPT_COPY.
 
