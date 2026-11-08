@@ -107,10 +107,11 @@ Generation used Python 3.13.5 with uv.lock-matching Mako 1.3.12, MarkupSafe 3.0.
 PyYAML 6.0.3, PeakRDL CLI 1.5.0 and raw-header 0.2.8. Immutable Bender.lock
 hardware commits and the public TB SHA are in results.json. Local generation
 used these exact packages in a task-local PYTHONPATH, not a dependency upgrade.
-Initial missing-generated-header, TB typedef, missing legacy source-list entry,
-and repetitive-data-fixture preparation failures remain in the private execution
-record. All eight comparison inputs were rerun after strengthening the pattern;
-the final published results refer only to the registered-arbitration v4 runs with exact unique-completion checking. Independent review requested registered grants to remove any ambiguity about cross-port combinational READY paths. All eight comparisons and both rejection controls were rerun after that test-only change; prior logs remain retained. The final v4 adds exact complete_count=1 and rejects unknown final queue/busy state; every comparison and rejection control was run again.
+The final test uses the registered AW-priority arbiter and a byte pattern that
+mixes high address bits. All eight comparison runs and both data-check rejection
+controls use exact unique-completion checking and reject unknown final
+queue/busy state. Earlier preparation failures and superseded runs are excluded
+from the published results.
 
 This is a backend/fabric unit result, not an LLC, SoC, all-protocol, all-width,
 error-path, compute-mode or physical implementation claim. No synthesis claim

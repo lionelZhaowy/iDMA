@@ -122,7 +122,7 @@
     }
   ],
   "limits": "100 us HDL; 60s wall each",
-  "preparation_corrections": "Official generated compute header; separate typedef declarations; locked deprecated delta_counter added to unit list. Initial byte pattern repeated at source/destination; strengthened high address mix and repeated all eight runs plus two data-check negatives. Old logs and old results remain. No production RTL changed. Independent review requested registered rather than cross-port combinational arbitration. Changed only TB arbiter, reran all eight comparisons and two rejection controls as v3; v2 retained and not relabelled. Final independent review added exact complete_count=1 and unknown-final-state rejection; all eight comparisons and two controls repeated as v4, previous v3 retained.",
+  "preparation_corrections": "The compile list includes the official generated compute header and the locked deprecated delta_counter. Test typedefs use separate declarations. The source/destination byte pattern mixes high address bits. The shared fabric uses a registered AW-priority grant. All eight comparisons and both data-check rejection controls require exact complete_count=1 and reject unknown final queue/busy state. Earlier preparation failures and superseded runs are excluded from these results. No production RTL changed.",
   "fabric": "Registered AW-priority grant; no READY combinational path from any AXI request input",
   "hardware_dependencies": [
     {
