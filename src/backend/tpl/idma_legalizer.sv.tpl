@@ -1,3 +1,4 @@
+<% axi_address_ordering = one_read_port and one_write_port and used_read_protocols == ['axi'] and used_write_protocols == ['axi'] %>\
 // Copyright 2023 ETH Zurich and University of Bologna.
 // Solderpad Hardware License, Version 0.51, see LICENSE for details.
 // SPDX-License-Identifier: SHL-0.51
@@ -804,6 +805,9 @@ ${database[protocol]['legalizer_read_meta_channel']}
     assign r_req_o.num_bytes = r_num_bytes;
     assign r_req_o.start_lane = OffsetWidth'(r_addr_offset - opt_tf_q.read_shift);
     assign r_req_o.deadlock_free = opt_tf_q.deadlock_free;
+% if axi_address_ordering:
+    assign r_req_o.coupled = opt_tf_q.deadlock_free && !opt_tf_q.decouple_rw;
+% endif
 
     // Write meta channel and data path
 % if one_write_port:
@@ -873,6 +877,9 @@ ${database[protocol]['legalizer_write_data_path']}
 
     // assign aw decouple flag
     assign w_req_o.decouple_aw = opt_w_q.decouple_aw;
+% if axi_address_ordering:
+    assign w_req_o.coupled = opt_w_q.deadlock_free && !opt_w_q.decouple_rw;
+% endif
 
     // busy output
     assign r_busy_o = r_tf_q.valid;

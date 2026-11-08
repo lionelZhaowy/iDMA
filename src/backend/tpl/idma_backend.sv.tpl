@@ -1,3 +1,4 @@
+<% axi_address_ordering = one_read_port and one_write_port and used_read_protocols == ['axi'] and used_write_protocols == ['axi'] %>\
 // Copyright 2023 ETH Zurich and University of Bologna.
 // Solderpad Hardware License, Version 0.51, see LICENSE for details.
 // SPDX-License-Identifier: SHL-0.51
@@ -282,6 +283,9 @@ _rsp_t ${mh_format['aw'][protocol]}${protocol}_write_rsp_i,
         tf_len_t            num_bytes;
         offset_t            start_lane;
         logic               deadlock_free;
+% if axi_address_ordering:
+        logic               coupled;
+% endif
     } idma_r_req_t;
 
     /// AR request and the metadata needed to reserve byte-lane buffer entries when it is issued.
@@ -294,6 +298,9 @@ _rsp_t ${mh_format['aw'][protocol]}${protocol}_write_rsp_i,
         tf_len_t            num_bytes;
         offset_t            start_lane;
         logic               deadlock_free;
+% if axi_address_ordering:
+        logic               coupled;
+% endif
     } read_reservation_req_t;
 
     /// The iDMA write request bundles an `AW` type and a datapath write response type together. It
@@ -308,7 +315,17 @@ _rsp_t ${mh_format['aw'][protocol]}${protocol}_write_rsp_i,
         logic                last;
         logic                super_last;
         logic                decouple_aw;
+% if axi_address_ordering:
+        logic                coupled;
+% endif
     } idma_w_req_t;
+% if axi_address_ordering:
+    // Keep ordering mode beside its AW through every address queue.
+    typedef struct packed {
+        write_meta_channel_t aw_req;
+        logic                coupled;
+    } write_order_req_t;
+% endif
 % if not one_write_port:
     typedef struct packed {
         idma_pkg::protocol_e  dst_protocol;
@@ -407,6 +424,53 @@ _rsp_t ${mh_format['aw'][protocol]}${protocol}_write_rsp_i,
     // AR request and reservation metadata from the decoupling stage to the datapath
     read_reservation_req_t ar_req_dp;
 
+% if axi_address_ordering:
+    write_order_req_t w_order_req, aw_order_req;
+    logic ar_order_valid, ar_order_ready, aw_order_valid, aw_order_ready;
+    logic ar_order_allow, aw_order_allow;
+    logic coupled_ar_fire, coupled_aw_fire;
+    localparam int unsigned ReadPermitWidth = cc_pkg::cnt_width(NumAxInFlight);
+    typedef logic [ReadPermitWidth-1:0] read_permit_t;
+    read_permit_t read_permits_q;
+
+    assign w_order_req = '{aw_req: w_req.aw_req, coupled: w_req.coupled};
+    assign aw_req_dp = aw_order_req.aw_req;
+    // Only registered permits affect admission. A same-cycle AR cannot release AW.
+    assign ar_order_allow = !RAWCouplingAvail || !ar_req_dp.coupled ||
+                            (read_permits_q < read_permit_t'(NumAxInFlight));
+    assign aw_order_allow = !RAWCouplingAvail || !aw_order_req.coupled ||
+                            (read_permits_q != '0);
+    assign ar_order_valid = ar_valid_dp && ar_order_allow;
+    assign ar_ready_dp = ar_order_ready && ar_order_allow;
+    assign aw_valid_dp = aw_order_valid && aw_order_allow;
+    assign aw_order_ready = aw_ready_dp && aw_order_allow;
+    assign coupled_ar_fire = RAWCouplingAvail && ar_req_dp.coupled &&
+                             axi_read_req_o.ar_valid && axi_read_rsp_i.ar_ready;
+    assign coupled_aw_fire = RAWCouplingAvail && aw_order_req.coupled &&
+                             axi_write_req_o.aw_valid && axi_write_rsp_i.aw_ready;
+    always_ff @(posedge clk_i or negedge rst_ni) begin
+        if (!rst_ni) read_permits_q <= '0;
+        else case ({coupled_ar_fire, coupled_aw_fire})
+            2'b10: read_permits_q <= read_permits_q + read_permit_t'(1);
+            2'b01: read_permits_q <= read_permits_q - read_permit_t'(1);
+            default: begin
+                // Hold the count when neither or both channels handshake.
+            end
+        endcase
+    end
+
+    `IDMA_NONSYNTH_BLOCK(
+    always @(posedge clk_i) if (rst_ni) begin
+        read_permit_count_in_range: assert (read_permits_q <= read_permit_t'(NumAxInFlight)) else
+            $fatal(1, "Coupled AXI read permit overflow");
+        aw_has_prior_read_permit: assert (!coupled_aw_fire || read_permits_q != '0) else
+            $fatal(1, "Coupled AXI AW has no earlier accepted AR");
+        ar_has_permit_capacity: assert (!coupled_ar_fire || read_permits_q < read_permit_t'(NumAxInFlight)) else
+            $fatal(1, "Coupled AXI AR exceeds the permit capacity");
+    end
+    )
+
+% endif
     // flush and preemptively empty the legalizer
     logic legalizer_flush, legalizer_kill;
 
@@ -624,6 +688,9 @@ _rsp_t ${mh_format['aw'][protocol]}${protocol}_write_rsp_i,
 
         // Deadlock-free mode is not supported without the hardware legalizer.
         assign r_req.deadlock_free = 1'b0;
+% if axi_address_ordering:
+        assign r_req.coupled = 1'b0;
+% endif
 
         // assemble write datapath request
         assign w_req.w_dp_req = '{
@@ -646,6 +713,9 @@ _rsp_t ${mh_format['aw'][protocol]}${protocol}_write_rsp_i,
 
         // bypass decouple signal
         assign w_req.decouple_aw = idma_req_i.opt.beo.decouple_aw;
+% if axi_address_ordering:
+        assign w_req.coupled = 1'b0;
+% endif
 
         // there is no unit to be busy
         assign busy_o.r_leg_busy = 1'b0;
@@ -824,6 +894,9 @@ _rsp_t ${mh_format['aw'][protocol]}${protocol}_write_rsp_i,
         r_reservation_req.num_bytes     = r_req.num_bytes;
         r_reservation_req.start_lane    = r_req.start_lane;
         r_reservation_req.deadlock_free = r_req.deadlock_free;
+% if axi_address_ordering:
+        r_reservation_req.coupled       = r_req.coupled;
+% endif
     end
 
     cc_fall_through_register #(
@@ -942,8 +1015,13 @@ _rsp_t ${mh_format['aw'][protocol]}${protocol}_write_rsp_i,
         .w_dp_valid_o    ( w_dp_rsp_valid       ),
         .w_dp_ready_i    ( w_dp_rsp_ready       ),
         .ar_req_i        ( ar_req_dp            ),
+% if axi_address_ordering:
+        .ar_valid_i      ( ar_order_valid       ),
+        .ar_ready_o      ( ar_order_ready       ),
+% else:
         .ar_valid_i      ( ar_valid_dp          ),
         .ar_ready_o      ( ar_ready_dp          ),
+% endif
         .aw_req_i        ( aw_req_dp            ),
         .aw_valid_i      ( aw_valid_dp          ),
         .aw_ready_o      ( aw_ready_dp          ),
@@ -996,7 +1074,9 @@ _rsp_t ${mh_format['aw'][protocol]}${protocol}_write_rsp_i,
             .AxiIdWidth      ( AxiIdWidth                  ),
             .PrintFifoInfo   ( PrintFifoInfo               ),
             .axi_aw_chan_t   (\
-% if one_write_port:
+% if axi_address_ordering:
+ write_order_req_t          )
+% elif one_write_port:
  write_meta_channel_t        )
 % else:
  write_meta_channel_tagged_t )
@@ -1023,16 +1103,24 @@ w_req.decouple_aw || (w_req.w_dp_req.dst_protocol inside {\
 % endif
  ),
             .aw_req_i         (\
-% if one_write_port:
+% if axi_address_ordering:
+ w_order_req                ),
+% elif one_write_port:
  w_req.aw_req                ),
 % else:
  w_meta_req_tagged           ),
 % endif
             .aw_valid_i       ( w_valid                     ),
             .aw_ready_o       ( aw_ready                    ),
+% if axi_address_ordering:
+            .aw_req_o         ( aw_order_req                ),
+            .aw_valid_o       ( aw_order_valid              ),
+            .aw_ready_i       ( aw_order_ready              ),
+% else:
             .aw_req_o         ( aw_req_dp                   ),
             .aw_valid_o       ( aw_valid_dp                 ),
             .aw_ready_i       ( aw_ready_dp                 ),
+% endif
             .busy_o           ( busy_o.raw_coupler_busy     )
         );
 % else:
@@ -1086,7 +1174,9 @@ w_req.decouple_aw || (w_req.w_dp_req.dst_protocol inside {\
         // does not add a cycle of delay
         cc_fall_through_register #(
             .data_t     (\
-    % if one_write_port:
+    % if axi_address_ordering:
+ write_order_req_t          )
+    % elif one_write_port:
  write_meta_channel_t        )
     % else:
  write_meta_channel_tagged_t )
@@ -1098,14 +1188,22 @@ w_req.decouple_aw || (w_req.w_dp_req.dst_protocol inside {\
             .valid_i    ( w_valid           ),
             .ready_o    ( aw_ready          ),
             .data_i     (\
-    % if one_write_port:
+    % if axi_address_ordering:
+ w_order_req       ),
+    % elif one_write_port:
  w_req.aw_req      ),
     % else:
  w_meta_req_tagged ),
     % endif
+% if axi_address_ordering:
+            .valid_o    ( aw_order_valid    ),
+            .ready_i    ( aw_order_ready    ),
+            .data_o     ( aw_order_req      )
+% else:
             .valid_o    ( aw_valid_dp       ),
             .ready_i    ( aw_ready_dp       ),
             .data_o     ( aw_req_dp         )
+% endif
         );
 % endif
 

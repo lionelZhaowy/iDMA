@@ -1,0 +1,1928 @@
+{
+  "author_head": "ac6a0d088904264fa5be17bd6d774e9c935d1d68",
+  "counts": {
+    "PASS": 38,
+    "EXPECTED_ONE_BYTE_DATA_REJECTION": 3,
+    "WAIT_CYCLE_AT_FINITE_LIMIT": 6,
+    "EXPECTED_UNSUPPORTED_PARAMETER_REJECTION": 2,
+    "DATA_PASS_ORDER_POLICY_REJECTION": 2
+  },
+  "runs": [
+    {
+      "test_group": "legacy",
+      "case": "legacy_v3_author_s0_a0_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SHARED=0",
+        "+DECOUPLE_AW=0"
+      ],
+      "summary": "SHARED_AXI_DONE shared=0 decouple_aw=0 checks=4096 errors=0 complete=1 AR=4 AW=4 R=8 W=8 B=4",
+      "mode_tags": [],
+      "log_sha256": "02b39921b6666ce8cd96bb2ddef017d537622d81d294a7383673c69490c884e2",
+      "metrics": {
+        "shared": 0,
+        "decouple_aw": 0,
+        "checks": 4096,
+        "errors": 0,
+        "complete": 1,
+        "AR": 4,
+        "AW": 4,
+        "R": 8,
+        "W": 8,
+        "B": 4
+      }
+    },
+    {
+      "test_group": "legacy",
+      "case": "legacy_v3_author_s0_a0_c1",
+      "classification": "EXPECTED_ONE_BYTE_DATA_REJECTION",
+      "arguments": [
+        "+SHARED=0",
+        "+DECOUPLE_AW=0",
+        "+CORRUPT_COPY"
+      ],
+      "summary": "SHARED_AXI_DONE shared=0 decouple_aw=0 checks=4096 errors=1 complete=1 AR=4 AW=4 R=8 W=8 B=4",
+      "mode_tags": [],
+      "log_sha256": "4ad4511aabfa3aac68be049cdd25de87ae335fe55e3dfe9d97db163dc16a0a07",
+      "metrics": {
+        "shared": 0,
+        "decouple_aw": 0,
+        "checks": 4096,
+        "errors": 1,
+        "complete": 1,
+        "AR": 4,
+        "AW": 4,
+        "R": 8,
+        "W": 8,
+        "B": 4
+      }
+    },
+    {
+      "test_group": "legacy",
+      "case": "legacy_v3_author_s0_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SHARED=0",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "SHARED_AXI_DONE shared=0 decouple_aw=1 checks=4096 errors=0 complete=1 AR=4 AW=4 R=8 W=8 B=4",
+      "mode_tags": [],
+      "log_sha256": "6f387354c66ced9fb4541e7ffb1d8afb019090abf180452d102890ea7852b6ef",
+      "metrics": {
+        "shared": 0,
+        "decouple_aw": 1,
+        "checks": 4096,
+        "errors": 0,
+        "complete": 1,
+        "AR": 4,
+        "AW": 4,
+        "R": 8,
+        "W": 8,
+        "B": 4
+      }
+    },
+    {
+      "test_group": "legacy",
+      "case": "legacy_v3_author_s1_a0_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SHARED=1",
+        "+DECOUPLE_AW=0"
+      ],
+      "summary": "SHARED_AXI_DONE shared=1 decouple_aw=0 checks=4096 errors=0 complete=1 AR=4 AW=4 R=8 W=8 B=4",
+      "mode_tags": [],
+      "log_sha256": "6ccc89a73181fa6ad5eb71f16ab6de5aed162ce806ed9f30537326bd33504fae",
+      "metrics": {
+        "shared": 1,
+        "decouple_aw": 0,
+        "checks": 4096,
+        "errors": 0,
+        "complete": 1,
+        "AR": 4,
+        "AW": 4,
+        "R": 8,
+        "W": 8,
+        "B": 4
+      }
+    },
+    {
+      "test_group": "legacy",
+      "case": "legacy_v3_author_s1_a1_c0",
+      "classification": "WAIT_CYCLE_AT_FINITE_LIMIT",
+      "arguments": [
+        "+SHARED=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "SHARED_AXI_DEADLINE shared=1 decouple_aw=1 complete=0 AR=1 AW=2 R=2 W=2 B=1 reading=0 writing=1 r_ready=1 w_valid=0 ar_valid=1 ar_ready=0 aw_valid=0 aw_ready=0",
+      "mode_tags": [],
+      "log_sha256": "256565507c5ae5be856771089ce747fed85f2794c539cf571b6fdaf46b02eedd",
+      "metrics": {}
+    },
+    {
+      "test_group": "legacy",
+      "case": "legacy_v3_candidate_s0_a0_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SHARED=0",
+        "+DECOUPLE_AW=0"
+      ],
+      "summary": "SHARED_AXI_DONE shared=0 decouple_aw=0 checks=4096 errors=0 complete=1 AR=4 AW=4 R=8 W=8 B=4",
+      "mode_tags": [],
+      "log_sha256": "b0d8cbd6203a48d9d8f1b3205ac2190203e3f3257305880c80a32de50578644a",
+      "metrics": {
+        "shared": 0,
+        "decouple_aw": 0,
+        "checks": 4096,
+        "errors": 0,
+        "complete": 1,
+        "AR": 4,
+        "AW": 4,
+        "R": 8,
+        "W": 8,
+        "B": 4
+      }
+    },
+    {
+      "test_group": "legacy",
+      "case": "legacy_v3_candidate_s0_a0_c1",
+      "classification": "EXPECTED_ONE_BYTE_DATA_REJECTION",
+      "arguments": [
+        "+SHARED=0",
+        "+DECOUPLE_AW=0",
+        "+CORRUPT_COPY"
+      ],
+      "summary": "SHARED_AXI_DONE shared=0 decouple_aw=0 checks=4096 errors=1 complete=1 AR=4 AW=4 R=8 W=8 B=4",
+      "mode_tags": [],
+      "log_sha256": "4ad4511aabfa3aac68be049cdd25de87ae335fe55e3dfe9d97db163dc16a0a07",
+      "metrics": {
+        "shared": 0,
+        "decouple_aw": 0,
+        "checks": 4096,
+        "errors": 1,
+        "complete": 1,
+        "AR": 4,
+        "AW": 4,
+        "R": 8,
+        "W": 8,
+        "B": 4
+      }
+    },
+    {
+      "test_group": "legacy",
+      "case": "legacy_v3_candidate_s0_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SHARED=0",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "SHARED_AXI_DONE shared=0 decouple_aw=1 checks=4096 errors=0 complete=1 AR=4 AW=4 R=8 W=8 B=4",
+      "mode_tags": [],
+      "log_sha256": "6f387354c66ced9fb4541e7ffb1d8afb019090abf180452d102890ea7852b6ef",
+      "metrics": {
+        "shared": 0,
+        "decouple_aw": 1,
+        "checks": 4096,
+        "errors": 0,
+        "complete": 1,
+        "AR": 4,
+        "AW": 4,
+        "R": 8,
+        "W": 8,
+        "B": 4
+      }
+    },
+    {
+      "test_group": "legacy",
+      "case": "legacy_v3_candidate_s1_a0_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SHARED=1",
+        "+DECOUPLE_AW=0"
+      ],
+      "summary": "SHARED_AXI_DONE shared=1 decouple_aw=0 checks=4096 errors=0 complete=1 AR=4 AW=4 R=8 W=8 B=4",
+      "mode_tags": [],
+      "log_sha256": "e9fa20e715b955501cd09aed7decd55f55b384d47ca64e55de37a180058a7d42",
+      "metrics": {
+        "shared": 1,
+        "decouple_aw": 0,
+        "checks": 4096,
+        "errors": 0,
+        "complete": 1,
+        "AR": 4,
+        "AW": 4,
+        "R": 8,
+        "W": 8,
+        "B": 4
+      }
+    },
+    {
+      "test_group": "legacy",
+      "case": "legacy_v3_candidate_s1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SHARED=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "SHARED_AXI_DONE shared=1 decouple_aw=1 checks=4096 errors=0 complete=1 AR=4 AW=4 R=8 W=8 B=4",
+      "mode_tags": [],
+      "log_sha256": "d8d78bfac8c743909fe3454c29aa1e398d213b8e7659b5935606af3ba041669b",
+      "metrics": {
+        "shared": 1,
+        "decouple_aw": 1,
+        "checks": 4096,
+        "errors": 0,
+        "complete": 1,
+        "AR": 4,
+        "AW": 4,
+        "R": 8,
+        "W": 8,
+        "B": 4
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n1_d3_q0_s0_f1_p0_a1_c0",
+      "classification": "EXPECTED_UNSUPPORTED_PARAMETER_REJECTION",
+      "arguments": [
+        "+SCENARIO=0",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=0",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "FIFO of depth 1 does not make any sense!",
+      "mode_tags": [],
+      "log_sha256": "ca2e43234ff3846f01078db52bde8a27e33be55b5aad71002d72b9755aa5ef22",
+      "metrics": {}
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n2_d8_q0_s0_f1_p3_a1_c0",
+      "classification": "DATA_PASS_ORDER_POLICY_REJECTION",
+      "arguments": [
+        "+SCENARIO=0",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=3",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=0 df=1 num_ax=2 buffer=8 jobs=1 checks=4096 data_errors=0 order_errors=1 stable_errors=0 bytes=64 AR=1 AW=1 R=8 W=8 B=1 protected_ar=1 protected_aw=1 peak=0 simultaneous=1 queued=1 ar_stalls=27 aw_stalls=26 w_stalls=3 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=0 differs_from_current_job=0"
+      ],
+      "log_sha256": "2c7eafc49520598d21f022d2e6eb471f2e0b0e320e08a1555462a422e6d167b8",
+      "metrics": {
+        "scenario": 0,
+        "df": 1,
+        "num_ax": 2,
+        "buffer": 8,
+        "jobs": 1,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 1,
+        "stable_errors": 0,
+        "bytes": 64,
+        "AR": 1,
+        "AW": 1,
+        "R": 8,
+        "W": 8,
+        "B": 1,
+        "protected_ar": 1,
+        "protected_aw": 1,
+        "peak": 0,
+        "simultaneous": 1,
+        "queued": 1,
+        "ar_stalls": 27,
+        "aw_stalls": 26,
+        "w_stalls": 3,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n2_d8_q1_s0_f0_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=1",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=0",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=1 df=0 num_ax=2 buffer=8 jobs=6 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=96 AR=6 AW=6 R=12 W=12 B=6 protected_ar=0 protected_aw=0 peak=0 simultaneous=0 queued=2 ar_stalls=33 aw_stalls=94 w_stalls=68 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=0 differs_from_current_job=0"
+      ],
+      "log_sha256": "8a5084ce3027734e1130c0b785577e1ab69396078cfb6cf7db0a759866ffdb47",
+      "metrics": {
+        "scenario": 1,
+        "df": 0,
+        "num_ax": 2,
+        "buffer": 8,
+        "jobs": 6,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 96,
+        "AR": 6,
+        "AW": 6,
+        "R": 12,
+        "W": 12,
+        "B": 6,
+        "protected_ar": 0,
+        "protected_aw": 0,
+        "peak": 0,
+        "simultaneous": 0,
+        "queued": 2,
+        "ar_stalls": 33,
+        "aw_stalls": 94,
+        "w_stalls": 68,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n2_d8_q1_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=1",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=1 df=1 num_ax=2 buffer=8 jobs=6 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=96 AR=6 AW=6 R=12 W=12 B=6 protected_ar=3 protected_aw=3 peak=1 simultaneous=0 queued=2 ar_stalls=33 aw_stalls=94 w_stalls=68 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=0 differs_from_current_job=0"
+      ],
+      "log_sha256": "f576b1db6bdc55eded497cbbe485d8dc9aa4008b9f2dc80452ab1f8926447c34",
+      "metrics": {
+        "scenario": 1,
+        "df": 1,
+        "num_ax": 2,
+        "buffer": 8,
+        "jobs": 6,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 96,
+        "AR": 6,
+        "AW": 6,
+        "R": 12,
+        "W": 12,
+        "B": 6,
+        "protected_ar": 3,
+        "protected_aw": 3,
+        "peak": 1,
+        "simultaneous": 0,
+        "queued": 2,
+        "ar_stalls": 33,
+        "aw_stalls": 94,
+        "w_stalls": 68,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n2_d8_q2_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=2",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=2 df=1 num_ax=2 buffer=8 jobs=6 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=96 AR=6 AW=6 R=12 W=12 B=6 protected_ar=6 protected_aw=6 peak=2 simultaneous=1 queued=3 ar_stalls=31 aw_stalls=99 w_stalls=68 limit_stalls=45",
+      "mode_tags": [
+        "ORDER_TAGS checks=0 differs_from_current_job=0"
+      ],
+      "log_sha256": "aa09dede7905ebce92d65ce4e89ee4c9ac8681172dcb219f6d4ed5b4ce305d2d",
+      "metrics": {
+        "scenario": 2,
+        "df": 1,
+        "num_ax": 2,
+        "buffer": 8,
+        "jobs": 6,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 96,
+        "AR": 6,
+        "AW": 6,
+        "R": 12,
+        "W": 12,
+        "B": 6,
+        "protected_ar": 6,
+        "protected_aw": 6,
+        "peak": 2,
+        "simultaneous": 1,
+        "queued": 3,
+        "ar_stalls": 31,
+        "aw_stalls": 99,
+        "w_stalls": 68,
+        "limit_stalls": 45
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n2_d8_q3_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=3",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=3 df=1 num_ax=2 buffer=8 jobs=8 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=106 AR=8 AW=8 R=20 W=20 B=8 protected_ar=8 protected_aw=8 peak=2 simultaneous=0 queued=3 ar_stalls=28 aw_stalls=104 w_stalls=71 limit_stalls=46",
+      "mode_tags": [
+        "ORDER_TAGS checks=0 differs_from_current_job=0"
+      ],
+      "log_sha256": "e79799b6f736582aa9e6b9be73c3a83daa4fd60542a71d4ae81bbabd2e83aede",
+      "metrics": {
+        "scenario": 3,
+        "df": 1,
+        "num_ax": 2,
+        "buffer": 8,
+        "jobs": 8,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 106,
+        "AR": 8,
+        "AW": 8,
+        "R": 20,
+        "W": 20,
+        "B": 8,
+        "protected_ar": 8,
+        "protected_aw": 8,
+        "peak": 2,
+        "simultaneous": 0,
+        "queued": 3,
+        "ar_stalls": 28,
+        "aw_stalls": 104,
+        "w_stalls": 71,
+        "limit_stalls": 46
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n2_d8_q4_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=4",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=4 df=1 num_ax=2 buffer=8 jobs=3 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=123 AR=3 AW=3 R=18 W=18 B=3 protected_ar=0 protected_aw=0 peak=0 simultaneous=0 queued=2 ar_stalls=28 aw_stalls=92 w_stalls=56 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=0 differs_from_current_job=0"
+      ],
+      "log_sha256": "9d0bd74e87f9576659c8c159284cada490b0373604e915468c3d71d122d71a57",
+      "metrics": {
+        "scenario": 4,
+        "df": 1,
+        "num_ax": 2,
+        "buffer": 8,
+        "jobs": 3,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 123,
+        "AR": 3,
+        "AW": 3,
+        "R": 18,
+        "W": 18,
+        "B": 3,
+        "protected_ar": 0,
+        "protected_aw": 0,
+        "peak": 0,
+        "simultaneous": 0,
+        "queued": 2,
+        "ar_stalls": 28,
+        "aw_stalls": 92,
+        "w_stalls": 56,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n2_d8_q5_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=5",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=5 df=1 num_ax=2 buffer=8 jobs=6 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=96 AR=6 AW=6 R=12 W=12 B=6 protected_ar=2 protected_aw=2 peak=1 simultaneous=0 queued=3 ar_stalls=35 aw_stalls=94 w_stalls=68 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=0 differs_from_current_job=0"
+      ],
+      "log_sha256": "d6be587f3a823110093faa915c6d2ad151f98da40cfee8d399be3852164ea204",
+      "metrics": {
+        "scenario": 5,
+        "df": 1,
+        "num_ax": 2,
+        "buffer": 8,
+        "jobs": 6,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 96,
+        "AR": 6,
+        "AW": 6,
+        "R": 12,
+        "W": 12,
+        "B": 6,
+        "protected_ar": 2,
+        "protected_aw": 2,
+        "peak": 1,
+        "simultaneous": 0,
+        "queued": 3,
+        "ar_stalls": 35,
+        "aw_stalls": 94,
+        "w_stalls": 68,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n3_d3_q0_s0_f0_p0_a0_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=0",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=0",
+        "+BACKPRESSURE=0",
+        "+DECOUPLE_AW=0"
+      ],
+      "summary": "ORDER_DONE scenario=0 df=0 num_ax=3 buffer=3 jobs=1 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=64 AR=1 AW=1 R=8 W=8 B=1 protected_ar=0 protected_aw=0 peak=0 simultaneous=0 queued=1 ar_stalls=0 aw_stalls=0 w_stalls=1 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=0 differs_from_current_job=0"
+      ],
+      "log_sha256": "c23faa09861c5de2ddc5e775d4518040e0c85d8ad7252d1ceb7b40ef276fc38e",
+      "metrics": {
+        "scenario": 0,
+        "df": 0,
+        "num_ax": 3,
+        "buffer": 3,
+        "jobs": 1,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 64,
+        "AR": 1,
+        "AW": 1,
+        "R": 8,
+        "W": 8,
+        "B": 1,
+        "protected_ar": 0,
+        "protected_aw": 0,
+        "peak": 0,
+        "simultaneous": 0,
+        "queued": 1,
+        "ar_stalls": 0,
+        "aw_stalls": 0,
+        "w_stalls": 1,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n3_d3_q0_s0_f0_p0_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=0",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=0",
+        "+BACKPRESSURE=0",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=0 df=0 num_ax=3 buffer=3 jobs=1 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=64 AR=1 AW=1 R=8 W=8 B=1 protected_ar=0 protected_aw=0 peak=0 simultaneous=0 queued=1 ar_stalls=0 aw_stalls=0 w_stalls=0 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=0 differs_from_current_job=0"
+      ],
+      "log_sha256": "da750f2a0eaa77ac8fc15a292f7722e6d20d707f6603ef9f93c0ef448727716c",
+      "metrics": {
+        "scenario": 0,
+        "df": 0,
+        "num_ax": 3,
+        "buffer": 3,
+        "jobs": 1,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 64,
+        "AR": 1,
+        "AW": 1,
+        "R": 8,
+        "W": 8,
+        "B": 1,
+        "protected_ar": 0,
+        "protected_aw": 0,
+        "peak": 0,
+        "simultaneous": 0,
+        "queued": 1,
+        "ar_stalls": 0,
+        "aw_stalls": 0,
+        "w_stalls": 0,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n3_d3_q0_s1_f0_p0_a0_c0",
+      "classification": "WAIT_CYCLE_AT_FINITE_LIMIT",
+      "arguments": [
+        "+SCENARIO=0",
+        "+SHARED=1",
+        "+DEADLOCK_FREE=0",
+        "+BACKPRESSURE=0",
+        "+DECOUPLE_AW=0"
+      ],
+      "summary": "ORDER_DEADLINE shared=1 decouple_aw=0 complete=0 AR=1 AW=0 R=3 W=0 B=0 reading=1 writing=0 r_ready=0 w_valid=1 ar_valid=0 ar_ready=0 aw_valid=1 aw_ready=0",
+      "mode_tags": [],
+      "log_sha256": "9b23678fb21942ad8a04041005955cd8a31e9fe24204c17a941a4516e0b14a18",
+      "metrics": {}
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n3_d3_q0_s1_f0_p0_a1_c0",
+      "classification": "WAIT_CYCLE_AT_FINITE_LIMIT",
+      "arguments": [
+        "+SCENARIO=0",
+        "+SHARED=1",
+        "+DEADLOCK_FREE=0",
+        "+BACKPRESSURE=0",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DEADLINE shared=1 decouple_aw=1 complete=0 AR=1 AW=0 R=3 W=0 B=0 reading=1 writing=0 r_ready=0 w_valid=1 ar_valid=0 ar_ready=0 aw_valid=1 aw_ready=0",
+      "mode_tags": [],
+      "log_sha256": "8f12837e8bd0a32d3d4c72e87931eac21cb9124ab3e58dd45f484637029a71da",
+      "metrics": {}
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n3_d3_q0_s1_f1_p0_a1_c0",
+      "classification": "WAIT_CYCLE_AT_FINITE_LIMIT",
+      "arguments": [
+        "+SCENARIO=0",
+        "+SHARED=1",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=0",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DEADLINE shared=1 decouple_aw=1 complete=0 AR=1 AW=2 R=2 W=2 B=1 reading=0 writing=1 r_ready=1 w_valid=0 ar_valid=1 ar_ready=0 aw_valid=0 aw_ready=0",
+      "mode_tags": [],
+      "log_sha256": "34181a28e314ceef315d8a18b4273a3bd65f32e22a5596ce9c0634df862d4705",
+      "metrics": {}
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n3_d8_q0_s0_f1_p3_a1_c0",
+      "classification": "DATA_PASS_ORDER_POLICY_REJECTION",
+      "arguments": [
+        "+SCENARIO=0",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=3",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=0 df=1 num_ax=3 buffer=8 jobs=1 checks=4096 data_errors=0 order_errors=1 stable_errors=0 bytes=64 AR=1 AW=1 R=8 W=8 B=1 protected_ar=1 protected_aw=1 peak=0 simultaneous=1 queued=1 ar_stalls=27 aw_stalls=26 w_stalls=3 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=0 differs_from_current_job=0"
+      ],
+      "log_sha256": "1799a5a84e635fa5de4f9b001b5a3e09c252dd0249245ab3a2fce39ee111b7da",
+      "metrics": {
+        "scenario": 0,
+        "df": 1,
+        "num_ax": 3,
+        "buffer": 8,
+        "jobs": 1,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 1,
+        "stable_errors": 0,
+        "bytes": 64,
+        "AR": 1,
+        "AW": 1,
+        "R": 8,
+        "W": 8,
+        "B": 1,
+        "protected_ar": 1,
+        "protected_aw": 1,
+        "peak": 0,
+        "simultaneous": 1,
+        "queued": 1,
+        "ar_stalls": 27,
+        "aw_stalls": 26,
+        "w_stalls": 3,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n3_d8_q1_s0_f0_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=1",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=0",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=1 df=0 num_ax=3 buffer=8 jobs=6 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=96 AR=6 AW=6 R=12 W=12 B=6 protected_ar=0 protected_aw=0 peak=0 simultaneous=0 queued=4 ar_stalls=37 aw_stalls=94 w_stalls=68 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=0 differs_from_current_job=0"
+      ],
+      "log_sha256": "8d555ab902bd37e3f4a3e900b3a2970f226d40ff547edc5b569ffc17ac063ea5",
+      "metrics": {
+        "scenario": 1,
+        "df": 0,
+        "num_ax": 3,
+        "buffer": 8,
+        "jobs": 6,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 96,
+        "AR": 6,
+        "AW": 6,
+        "R": 12,
+        "W": 12,
+        "B": 6,
+        "protected_ar": 0,
+        "protected_aw": 0,
+        "peak": 0,
+        "simultaneous": 0,
+        "queued": 4,
+        "ar_stalls": 37,
+        "aw_stalls": 94,
+        "w_stalls": 68,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n3_d8_q1_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=1",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=1 df=1 num_ax=3 buffer=8 jobs=6 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=96 AR=6 AW=6 R=12 W=12 B=6 protected_ar=3 protected_aw=3 peak=2 simultaneous=0 queued=4 ar_stalls=37 aw_stalls=94 w_stalls=68 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=0 differs_from_current_job=0"
+      ],
+      "log_sha256": "9370d43d380a1a6d084ed642f3076b193be2528cb0646d427170dce188777daa",
+      "metrics": {
+        "scenario": 1,
+        "df": 1,
+        "num_ax": 3,
+        "buffer": 8,
+        "jobs": 6,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 96,
+        "AR": 6,
+        "AW": 6,
+        "R": 12,
+        "W": 12,
+        "B": 6,
+        "protected_ar": 3,
+        "protected_aw": 3,
+        "peak": 2,
+        "simultaneous": 0,
+        "queued": 4,
+        "ar_stalls": 37,
+        "aw_stalls": 94,
+        "w_stalls": 68,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n3_d8_q2_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=2",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=2 df=1 num_ax=3 buffer=8 jobs=6 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=96 AR=6 AW=6 R=12 W=12 B=6 protected_ar=6 protected_aw=6 peak=3 simultaneous=0 queued=4 ar_stalls=33 aw_stalls=99 w_stalls=68 limit_stalls=41",
+      "mode_tags": [
+        "ORDER_TAGS checks=0 differs_from_current_job=0"
+      ],
+      "log_sha256": "04d7373c8ba8323dbcfdebe8d4b27e04b447a636e3f08bdd87d7cda6f24fc572",
+      "metrics": {
+        "scenario": 2,
+        "df": 1,
+        "num_ax": 3,
+        "buffer": 8,
+        "jobs": 6,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 96,
+        "AR": 6,
+        "AW": 6,
+        "R": 12,
+        "W": 12,
+        "B": 6,
+        "protected_ar": 6,
+        "protected_aw": 6,
+        "peak": 3,
+        "simultaneous": 0,
+        "queued": 4,
+        "ar_stalls": 33,
+        "aw_stalls": 99,
+        "w_stalls": 68,
+        "limit_stalls": 41
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n3_d8_q3_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=3",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=3 df=1 num_ax=3 buffer=8 jobs=8 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=106 AR=8 AW=8 R=20 W=20 B=8 protected_ar=8 protected_aw=8 peak=3 simultaneous=0 queued=4 ar_stalls=29 aw_stalls=104 w_stalls=71 limit_stalls=44",
+      "mode_tags": [
+        "ORDER_TAGS checks=0 differs_from_current_job=0"
+      ],
+      "log_sha256": "ed276408f6bbbe3b739516f91c4af3d1555e88b82327d14d21f024e2a49e935f",
+      "metrics": {
+        "scenario": 3,
+        "df": 1,
+        "num_ax": 3,
+        "buffer": 8,
+        "jobs": 8,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 106,
+        "AR": 8,
+        "AW": 8,
+        "R": 20,
+        "W": 20,
+        "B": 8,
+        "protected_ar": 8,
+        "protected_aw": 8,
+        "peak": 3,
+        "simultaneous": 0,
+        "queued": 4,
+        "ar_stalls": 29,
+        "aw_stalls": 104,
+        "w_stalls": 71,
+        "limit_stalls": 44
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n3_d8_q4_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=4",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=4 df=1 num_ax=3 buffer=8 jobs=3 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=123 AR=3 AW=3 R=18 W=18 B=3 protected_ar=0 protected_aw=0 peak=0 simultaneous=0 queued=3 ar_stalls=28 aw_stalls=92 w_stalls=56 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=0 differs_from_current_job=0"
+      ],
+      "log_sha256": "932ecb195967d7632945aab3d5ce9b6203fade765a0c95665033bdda9619cfa6",
+      "metrics": {
+        "scenario": 4,
+        "df": 1,
+        "num_ax": 3,
+        "buffer": 8,
+        "jobs": 3,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 123,
+        "AR": 3,
+        "AW": 3,
+        "R": 18,
+        "W": 18,
+        "B": 3,
+        "protected_ar": 0,
+        "protected_aw": 0,
+        "peak": 0,
+        "simultaneous": 0,
+        "queued": 3,
+        "ar_stalls": 28,
+        "aw_stalls": 92,
+        "w_stalls": 56,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_author_n3_d8_q5_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=5",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=5 df=1 num_ax=3 buffer=8 jobs=6 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=96 AR=6 AW=6 R=12 W=12 B=6 protected_ar=2 protected_aw=2 peak=1 simultaneous=0 queued=3 ar_stalls=35 aw_stalls=94 w_stalls=68 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=0 differs_from_current_job=0"
+      ],
+      "log_sha256": "656a9da847abd69bd82d7815f6a846c37b798590bb5f2068ed2354e63d23bbad",
+      "metrics": {
+        "scenario": 5,
+        "df": 1,
+        "num_ax": 3,
+        "buffer": 8,
+        "jobs": 6,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 96,
+        "AR": 6,
+        "AW": 6,
+        "R": 12,
+        "W": 12,
+        "B": 6,
+        "protected_ar": 2,
+        "protected_aw": 2,
+        "peak": 1,
+        "simultaneous": 0,
+        "queued": 3,
+        "ar_stalls": 35,
+        "aw_stalls": 94,
+        "w_stalls": 68,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n1_d3_q0_s0_f1_p0_a1_c0",
+      "classification": "EXPECTED_UNSUPPORTED_PARAMETER_REJECTION",
+      "arguments": [
+        "+SCENARIO=0",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=0",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "FIFO of depth 1 does not make any sense!",
+      "mode_tags": [],
+      "log_sha256": "ca2e43234ff3846f01078db52bde8a27e33be55b5aad71002d72b9755aa5ef22",
+      "metrics": {}
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n2_d8_q0_s0_f1_p3_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=0",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=3",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=0 df=1 num_ax=2 buffer=8 jobs=1 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=64 AR=1 AW=1 R=8 W=8 B=1 protected_ar=1 protected_aw=1 peak=1 simultaneous=0 queued=1 ar_stalls=27 aw_stalls=0 w_stalls=3 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=2 differs_from_current_job=0"
+      ],
+      "log_sha256": "df0e151987de92c2dd4d44e7a86e624db1c9a2b538cd983696946eb6cd4f9d13",
+      "metrics": {
+        "scenario": 0,
+        "df": 1,
+        "num_ax": 2,
+        "buffer": 8,
+        "jobs": 1,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 64,
+        "AR": 1,
+        "AW": 1,
+        "R": 8,
+        "W": 8,
+        "B": 1,
+        "protected_ar": 1,
+        "protected_aw": 1,
+        "peak": 1,
+        "simultaneous": 0,
+        "queued": 1,
+        "ar_stalls": 27,
+        "aw_stalls": 0,
+        "w_stalls": 3,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n2_d8_q1_s0_f0_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=1",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=0",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=1 df=0 num_ax=2 buffer=8 jobs=6 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=96 AR=6 AW=6 R=12 W=12 B=6 protected_ar=0 protected_aw=0 peak=0 simultaneous=0 queued=2 ar_stalls=33 aw_stalls=94 w_stalls=68 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=12 differs_from_current_job=0"
+      ],
+      "log_sha256": "e34311419b9bc7169e75d89b697d6330e85917a7e428f20e87eb96e62e4d394b",
+      "metrics": {
+        "scenario": 1,
+        "df": 0,
+        "num_ax": 2,
+        "buffer": 8,
+        "jobs": 6,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 96,
+        "AR": 6,
+        "AW": 6,
+        "R": 12,
+        "W": 12,
+        "B": 6,
+        "protected_ar": 0,
+        "protected_aw": 0,
+        "peak": 0,
+        "simultaneous": 0,
+        "queued": 2,
+        "ar_stalls": 33,
+        "aw_stalls": 94,
+        "w_stalls": 68,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n2_d8_q1_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=1",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=1 df=1 num_ax=2 buffer=8 jobs=6 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=96 AR=6 AW=6 R=12 W=12 B=6 protected_ar=3 protected_aw=3 peak=1 simultaneous=0 queued=2 ar_stalls=33 aw_stalls=67 w_stalls=68 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=12 differs_from_current_job=3"
+      ],
+      "log_sha256": "5ae0e33917db1cdd06446cabf242975730040abdc6c446d1d039e8705f7cdd96",
+      "metrics": {
+        "scenario": 1,
+        "df": 1,
+        "num_ax": 2,
+        "buffer": 8,
+        "jobs": 6,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 96,
+        "AR": 6,
+        "AW": 6,
+        "R": 12,
+        "W": 12,
+        "B": 6,
+        "protected_ar": 3,
+        "protected_aw": 3,
+        "peak": 1,
+        "simultaneous": 0,
+        "queued": 2,
+        "ar_stalls": 33,
+        "aw_stalls": 67,
+        "w_stalls": 68,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n2_d8_q2_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=2",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=2 df=1 num_ax=2 buffer=8 jobs=6 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=96 AR=6 AW=6 R=12 W=12 B=6 protected_ar=6 protected_aw=6 peak=2 simultaneous=1 queued=3 ar_stalls=31 aw_stalls=72 w_stalls=68 limit_stalls=45",
+      "mode_tags": [
+        "ORDER_TAGS checks=12 differs_from_current_job=0"
+      ],
+      "log_sha256": "3e51565563f8b3f236ede68e3afdc8944cb7f57012b71fda42b53a120a975952",
+      "metrics": {
+        "scenario": 2,
+        "df": 1,
+        "num_ax": 2,
+        "buffer": 8,
+        "jobs": 6,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 96,
+        "AR": 6,
+        "AW": 6,
+        "R": 12,
+        "W": 12,
+        "B": 6,
+        "protected_ar": 6,
+        "protected_aw": 6,
+        "peak": 2,
+        "simultaneous": 1,
+        "queued": 3,
+        "ar_stalls": 31,
+        "aw_stalls": 72,
+        "w_stalls": 68,
+        "limit_stalls": 45
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n2_d8_q3_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=3",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=3 df=1 num_ax=2 buffer=8 jobs=8 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=106 AR=8 AW=8 R=20 W=20 B=8 protected_ar=8 protected_aw=8 peak=2 simultaneous=0 queued=3 ar_stalls=28 aw_stalls=77 w_stalls=71 limit_stalls=46",
+      "mode_tags": [
+        "ORDER_TAGS checks=16 differs_from_current_job=0"
+      ],
+      "log_sha256": "7fefe8af9371e97c4bb6d17c63c000c27edae3d12834c4da534fbdce32546cf2",
+      "metrics": {
+        "scenario": 3,
+        "df": 1,
+        "num_ax": 2,
+        "buffer": 8,
+        "jobs": 8,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 106,
+        "AR": 8,
+        "AW": 8,
+        "R": 20,
+        "W": 20,
+        "B": 8,
+        "protected_ar": 8,
+        "protected_aw": 8,
+        "peak": 2,
+        "simultaneous": 0,
+        "queued": 3,
+        "ar_stalls": 28,
+        "aw_stalls": 77,
+        "w_stalls": 71,
+        "limit_stalls": 46
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n2_d8_q4_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=4",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=4 df=1 num_ax=2 buffer=8 jobs=3 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=123 AR=3 AW=3 R=18 W=18 B=3 protected_ar=0 protected_aw=0 peak=0 simultaneous=0 queued=2 ar_stalls=28 aw_stalls=92 w_stalls=56 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=6 differs_from_current_job=0"
+      ],
+      "log_sha256": "06434cdcfabc7d7727abc2e2c18aee0f03845c6b9813a5a24130b40d0f0c479f",
+      "metrics": {
+        "scenario": 4,
+        "df": 1,
+        "num_ax": 2,
+        "buffer": 8,
+        "jobs": 3,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 123,
+        "AR": 3,
+        "AW": 3,
+        "R": 18,
+        "W": 18,
+        "B": 3,
+        "protected_ar": 0,
+        "protected_aw": 0,
+        "peak": 0,
+        "simultaneous": 0,
+        "queued": 2,
+        "ar_stalls": 28,
+        "aw_stalls": 92,
+        "w_stalls": 56,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n2_d8_q5_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=5",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=5 df=1 num_ax=2 buffer=8 jobs=6 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=96 AR=6 AW=6 R=12 W=12 B=6 protected_ar=2 protected_aw=2 peak=1 simultaneous=0 queued=3 ar_stalls=35 aw_stalls=67 w_stalls=68 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=12 differs_from_current_job=3"
+      ],
+      "log_sha256": "8fc022c6b8f16eb18a49f8473c5691ee9ee26727b487f9a984beb5e78cfcc652",
+      "metrics": {
+        "scenario": 5,
+        "df": 1,
+        "num_ax": 2,
+        "buffer": 8,
+        "jobs": 6,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 96,
+        "AR": 6,
+        "AW": 6,
+        "R": 12,
+        "W": 12,
+        "B": 6,
+        "protected_ar": 2,
+        "protected_aw": 2,
+        "peak": 1,
+        "simultaneous": 0,
+        "queued": 3,
+        "ar_stalls": 35,
+        "aw_stalls": 67,
+        "w_stalls": 68,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n3_d3_q0_s0_f0_p0_a0_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=0",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=0",
+        "+BACKPRESSURE=0",
+        "+DECOUPLE_AW=0"
+      ],
+      "summary": "ORDER_DONE scenario=0 df=0 num_ax=3 buffer=3 jobs=1 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=64 AR=1 AW=1 R=8 W=8 B=1 protected_ar=0 protected_aw=0 peak=0 simultaneous=0 queued=1 ar_stalls=0 aw_stalls=0 w_stalls=1 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=2 differs_from_current_job=0"
+      ],
+      "log_sha256": "2eb3173a05e111da5701cc9345735436e46a08d737d4e1edb208103ceeee9425",
+      "metrics": {
+        "scenario": 0,
+        "df": 0,
+        "num_ax": 3,
+        "buffer": 3,
+        "jobs": 1,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 64,
+        "AR": 1,
+        "AW": 1,
+        "R": 8,
+        "W": 8,
+        "B": 1,
+        "protected_ar": 0,
+        "protected_aw": 0,
+        "peak": 0,
+        "simultaneous": 0,
+        "queued": 1,
+        "ar_stalls": 0,
+        "aw_stalls": 0,
+        "w_stalls": 1,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n3_d3_q0_s0_f0_p0_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=0",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=0",
+        "+BACKPRESSURE=0",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=0 df=0 num_ax=3 buffer=3 jobs=1 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=64 AR=1 AW=1 R=8 W=8 B=1 protected_ar=0 protected_aw=0 peak=0 simultaneous=0 queued=1 ar_stalls=0 aw_stalls=0 w_stalls=0 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=2 differs_from_current_job=0"
+      ],
+      "log_sha256": "eef5dc483698a7c18974e5d06fa525ea279ccc6aebfeba0070cbe1b25aec5a6f",
+      "metrics": {
+        "scenario": 0,
+        "df": 0,
+        "num_ax": 3,
+        "buffer": 3,
+        "jobs": 1,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 64,
+        "AR": 1,
+        "AW": 1,
+        "R": 8,
+        "W": 8,
+        "B": 1,
+        "protected_ar": 0,
+        "protected_aw": 0,
+        "peak": 0,
+        "simultaneous": 0,
+        "queued": 1,
+        "ar_stalls": 0,
+        "aw_stalls": 0,
+        "w_stalls": 0,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n3_d3_q0_s1_f0_p0_a0_c0",
+      "classification": "WAIT_CYCLE_AT_FINITE_LIMIT",
+      "arguments": [
+        "+SCENARIO=0",
+        "+SHARED=1",
+        "+DEADLOCK_FREE=0",
+        "+BACKPRESSURE=0",
+        "+DECOUPLE_AW=0"
+      ],
+      "summary": "ORDER_DEADLINE shared=1 decouple_aw=0 complete=0 AR=1 AW=0 R=3 W=0 B=0 reading=1 writing=0 r_ready=0 w_valid=1 ar_valid=0 ar_ready=0 aw_valid=1 aw_ready=0",
+      "mode_tags": [],
+      "log_sha256": "c01c9ccbf80baa1e4d5094ce72dd4ca652989d2961d20489b7edb64660b85cf1",
+      "metrics": {}
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n3_d3_q0_s1_f0_p0_a1_c0",
+      "classification": "WAIT_CYCLE_AT_FINITE_LIMIT",
+      "arguments": [
+        "+SCENARIO=0",
+        "+SHARED=1",
+        "+DEADLOCK_FREE=0",
+        "+BACKPRESSURE=0",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DEADLINE shared=1 decouple_aw=1 complete=0 AR=1 AW=0 R=3 W=0 B=0 reading=1 writing=0 r_ready=0 w_valid=1 ar_valid=0 ar_ready=0 aw_valid=1 aw_ready=0",
+      "mode_tags": [],
+      "log_sha256": "a2c89948f721e16ddd89f969b9e7aff4a5998195ebe39411f2e952b489c81294",
+      "metrics": {}
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n3_d3_q0_s1_f1_p0_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=0",
+        "+SHARED=1",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=0",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=0 df=1 num_ax=3 buffer=3 jobs=1 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=64 AR=4 AW=4 R=8 W=8 B=4 protected_ar=4 protected_aw=4 peak=1 simultaneous=0 queued=1 ar_stalls=10 aw_stalls=12 w_stalls=12 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=8 differs_from_current_job=0"
+      ],
+      "log_sha256": "92d3644e02b4ee1fa8cd0f891f004d2b02156fecde860a31d80d1a25c79c6c21",
+      "metrics": {
+        "scenario": 0,
+        "df": 1,
+        "num_ax": 3,
+        "buffer": 3,
+        "jobs": 1,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 64,
+        "AR": 4,
+        "AW": 4,
+        "R": 8,
+        "W": 8,
+        "B": 4,
+        "protected_ar": 4,
+        "protected_aw": 4,
+        "peak": 1,
+        "simultaneous": 0,
+        "queued": 1,
+        "ar_stalls": 10,
+        "aw_stalls": 12,
+        "w_stalls": 12,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n3_d8_q0_s0_f1_p3_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=0",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=3",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=0 df=1 num_ax=3 buffer=8 jobs=1 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=64 AR=1 AW=1 R=8 W=8 B=1 protected_ar=1 protected_aw=1 peak=1 simultaneous=0 queued=1 ar_stalls=27 aw_stalls=0 w_stalls=3 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=2 differs_from_current_job=0"
+      ],
+      "log_sha256": "25d2e7e408e5cec31632e57f590d6b420287676a9e3fd846df34cea28381e204",
+      "metrics": {
+        "scenario": 0,
+        "df": 1,
+        "num_ax": 3,
+        "buffer": 8,
+        "jobs": 1,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 64,
+        "AR": 1,
+        "AW": 1,
+        "R": 8,
+        "W": 8,
+        "B": 1,
+        "protected_ar": 1,
+        "protected_aw": 1,
+        "peak": 1,
+        "simultaneous": 0,
+        "queued": 1,
+        "ar_stalls": 27,
+        "aw_stalls": 0,
+        "w_stalls": 3,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n3_d8_q1_s0_f0_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=1",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=0",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=1 df=0 num_ax=3 buffer=8 jobs=6 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=96 AR=6 AW=6 R=12 W=12 B=6 protected_ar=0 protected_aw=0 peak=0 simultaneous=0 queued=4 ar_stalls=37 aw_stalls=94 w_stalls=68 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=12 differs_from_current_job=0"
+      ],
+      "log_sha256": "40b7105ce80b6fa5ad31744b81d9e6c5c71c16d90d11cc8e00f307fb9a467556",
+      "metrics": {
+        "scenario": 1,
+        "df": 0,
+        "num_ax": 3,
+        "buffer": 8,
+        "jobs": 6,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 96,
+        "AR": 6,
+        "AW": 6,
+        "R": 12,
+        "W": 12,
+        "B": 6,
+        "protected_ar": 0,
+        "protected_aw": 0,
+        "peak": 0,
+        "simultaneous": 0,
+        "queued": 4,
+        "ar_stalls": 37,
+        "aw_stalls": 94,
+        "w_stalls": 68,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n3_d8_q1_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=1",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=1 df=1 num_ax=3 buffer=8 jobs=6 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=96 AR=6 AW=6 R=12 W=12 B=6 protected_ar=3 protected_aw=3 peak=2 simultaneous=0 queued=4 ar_stalls=37 aw_stalls=67 w_stalls=68 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=12 differs_from_current_job=2"
+      ],
+      "log_sha256": "555a4d6809742957a7c73d2641b58077d610eee48b44e0b8e694c2cd44c83404",
+      "metrics": {
+        "scenario": 1,
+        "df": 1,
+        "num_ax": 3,
+        "buffer": 8,
+        "jobs": 6,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 96,
+        "AR": 6,
+        "AW": 6,
+        "R": 12,
+        "W": 12,
+        "B": 6,
+        "protected_ar": 3,
+        "protected_aw": 3,
+        "peak": 2,
+        "simultaneous": 0,
+        "queued": 4,
+        "ar_stalls": 37,
+        "aw_stalls": 67,
+        "w_stalls": 68,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n3_d8_q1_s0_f1_p1_a1_c1",
+      "classification": "EXPECTED_ONE_BYTE_DATA_REJECTION",
+      "arguments": [
+        "+SCENARIO=1",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1",
+        "+CORRUPT_COPY"
+      ],
+      "summary": "ORDER_DONE scenario=1 df=1 num_ax=3 buffer=8 jobs=6 checks=4096 data_errors=1 order_errors=0 stable_errors=0 bytes=96 AR=6 AW=6 R=12 W=12 B=6 protected_ar=3 protected_aw=3 peak=2 simultaneous=0 queued=4 ar_stalls=37 aw_stalls=67 w_stalls=68 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=12 differs_from_current_job=2"
+      ],
+      "log_sha256": "27b8be45ae5164960a2f272e850921610210f85e7ad7f02dc55b5b7166c0201c",
+      "metrics": {
+        "scenario": 1,
+        "df": 1,
+        "num_ax": 3,
+        "buffer": 8,
+        "jobs": 6,
+        "checks": 4096,
+        "data_errors": 1,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 96,
+        "AR": 6,
+        "AW": 6,
+        "R": 12,
+        "W": 12,
+        "B": 6,
+        "protected_ar": 3,
+        "protected_aw": 3,
+        "peak": 2,
+        "simultaneous": 0,
+        "queued": 4,
+        "ar_stalls": 37,
+        "aw_stalls": 67,
+        "w_stalls": 68,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n3_d8_q2_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=2",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=2 df=1 num_ax=3 buffer=8 jobs=6 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=96 AR=6 AW=6 R=12 W=12 B=6 protected_ar=6 protected_aw=6 peak=3 simultaneous=0 queued=4 ar_stalls=33 aw_stalls=72 w_stalls=68 limit_stalls=41",
+      "mode_tags": [
+        "ORDER_TAGS checks=12 differs_from_current_job=0"
+      ],
+      "log_sha256": "f5c96c3db8c328cbf1ff2cdc631c01aff08212d791029f7aff5563c99b94201f",
+      "metrics": {
+        "scenario": 2,
+        "df": 1,
+        "num_ax": 3,
+        "buffer": 8,
+        "jobs": 6,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 96,
+        "AR": 6,
+        "AW": 6,
+        "R": 12,
+        "W": 12,
+        "B": 6,
+        "protected_ar": 6,
+        "protected_aw": 6,
+        "peak": 3,
+        "simultaneous": 0,
+        "queued": 4,
+        "ar_stalls": 33,
+        "aw_stalls": 72,
+        "w_stalls": 68,
+        "limit_stalls": 41
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n3_d8_q3_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=3",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=3 df=1 num_ax=3 buffer=8 jobs=8 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=106 AR=8 AW=8 R=20 W=20 B=8 protected_ar=8 protected_aw=8 peak=3 simultaneous=0 queued=4 ar_stalls=29 aw_stalls=77 w_stalls=71 limit_stalls=44",
+      "mode_tags": [
+        "ORDER_TAGS checks=16 differs_from_current_job=0"
+      ],
+      "log_sha256": "61b3a51f00e4ed4e7888310b53e6734e1358c8f6c1a1ab95a4ff4bff3b3b5c83",
+      "metrics": {
+        "scenario": 3,
+        "df": 1,
+        "num_ax": 3,
+        "buffer": 8,
+        "jobs": 8,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 106,
+        "AR": 8,
+        "AW": 8,
+        "R": 20,
+        "W": 20,
+        "B": 8,
+        "protected_ar": 8,
+        "protected_aw": 8,
+        "peak": 3,
+        "simultaneous": 0,
+        "queued": 4,
+        "ar_stalls": 29,
+        "aw_stalls": 77,
+        "w_stalls": 71,
+        "limit_stalls": 44
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n3_d8_q4_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=4",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=4 df=1 num_ax=3 buffer=8 jobs=3 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=123 AR=3 AW=3 R=18 W=18 B=3 protected_ar=0 protected_aw=0 peak=0 simultaneous=0 queued=3 ar_stalls=28 aw_stalls=92 w_stalls=56 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=6 differs_from_current_job=0"
+      ],
+      "log_sha256": "cf178008a23582100be6c8e3719ab3f702af3f85d1459d41212097fadad1d614",
+      "metrics": {
+        "scenario": 4,
+        "df": 1,
+        "num_ax": 3,
+        "buffer": 8,
+        "jobs": 3,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 123,
+        "AR": 3,
+        "AW": 3,
+        "R": 18,
+        "W": 18,
+        "B": 3,
+        "protected_ar": 0,
+        "protected_aw": 0,
+        "peak": 0,
+        "simultaneous": 0,
+        "queued": 3,
+        "ar_stalls": 28,
+        "aw_stalls": 92,
+        "w_stalls": 56,
+        "limit_stalls": 0
+      }
+    },
+    {
+      "test_group": "extended",
+      "case": "run_extended_v4_candidate_n3_d8_q5_s0_f1_p1_a1_c0",
+      "classification": "PASS",
+      "arguments": [
+        "+SCENARIO=5",
+        "+SHARED=0",
+        "+DEADLOCK_FREE=1",
+        "+BACKPRESSURE=1",
+        "+DECOUPLE_AW=1"
+      ],
+      "summary": "ORDER_DONE scenario=5 df=1 num_ax=3 buffer=8 jobs=6 checks=4096 data_errors=0 order_errors=0 stable_errors=0 bytes=96 AR=6 AW=6 R=12 W=12 B=6 protected_ar=2 protected_aw=2 peak=1 simultaneous=0 queued=3 ar_stalls=35 aw_stalls=67 w_stalls=68 limit_stalls=0",
+      "mode_tags": [
+        "ORDER_TAGS checks=12 differs_from_current_job=2"
+      ],
+      "log_sha256": "a234f8c25fc2c49ff08ca915b68bc10d79b4babc56b9ecb5eaf5d21e7d4ca608",
+      "metrics": {
+        "scenario": 5,
+        "df": 1,
+        "num_ax": 3,
+        "buffer": 8,
+        "jobs": 6,
+        "checks": 4096,
+        "data_errors": 0,
+        "order_errors": 0,
+        "stable_errors": 0,
+        "bytes": 96,
+        "AR": 6,
+        "AW": 6,
+        "R": 12,
+        "W": 12,
+        "B": 6,
+        "protected_ar": 2,
+        "protected_aw": 2,
+        "peak": 1,
+        "simultaneous": 0,
+        "queued": 3,
+        "ar_stalls": 35,
+        "aw_stalls": 67,
+        "w_stalls": 68,
+        "limit_stalls": 0
+      }
+    }
+  ],
+  "official_devel": "a6b1d6657c03998b6df0baf905d7babd006ba614",
+  "limits": "100 us HDL and 60 seconds wall time for each simulation",
+  "tools": {
+    "simulator": "VCS W-2024.09-SP1",
+    "synthesis": "DC W-2024.09-SP1",
+    "generator_python": "3.13.5",
+    "Mako": "1.3.12",
+    "MarkupSafe": "3.0.3",
+    "PyYAML": "6.0.3",
+    "PeakRDL-CLI": "1.5.0",
+    "PeakRDL-rawheader": "0.2.8"
+  },
+  "hardware_dependencies": [
+    {
+      "name": "apb",
+      "revision": "6ae8bf8d5eab5dc70d032231c01ab95e1c5774b9",
+      "url": "https://github.com/pulp-platform/apb",
+      "archive_sha256": "f7944af0b20881b3dd12106effd1b0c136b3fb1b36e4cd7425e275cd26ec36a6"
+    },
+    {
+      "name": "axi",
+      "revision": "0ccc838fe06aeeb857eb83c6be9a915c4bf99566",
+      "url": "https://github.com/pulp-platform/axi",
+      "archive_sha256": "2d9a0da264deb5319eaedd130cdd36d6ef5d95b35ae1ca32bd180aa11a0c3fd3"
+    },
+    {
+      "name": "axi_stream",
+      "revision": "ce1547861f99ab3d8834d04aa36d2d4184a28df7",
+      "url": "https://github.com/pulp-platform/axi_stream",
+      "archive_sha256": "231fdf047ada75761b1ec5be430f35827dc4f11efbae56bba68237a3c34635a4"
+    },
+    {
+      "name": "common_cells",
+      "revision": "63b7c50d43e462b59506f69d341ff1e40202866d",
+      "url": "https://github.com/pulp-platform/common_cells",
+      "archive_sha256": "30a305a95f4efefad3c14ac16e0f58f11b94b234ea03854bcf330e2353ed8f6e"
+    },
+    {
+      "name": "common_verification",
+      "revision": "fb1885f48ea46164a10568aeff51884389f67ae3",
+      "url": "https://github.com/pulp-platform/common_verification",
+      "archive_sha256": "c340d5f4f7bfb149c2a696d9cfef4cd11ef72352c6a17a3be91fce6e996e89c8"
+    },
+    {
+      "name": "obi",
+      "revision": "b69af4aa00630efd14b1c5cbf9bac977f23ce840",
+      "url": "https://github.com/pulp-platform/obi",
+      "archive_sha256": "c7a030ee2da8b9009dbd4c7a5549b34731bc3cbb4954cd526bf55dad0424f278"
+    },
+    {
+      "name": "tech_cells_generic",
+      "revision": "3a3de73632a06826b1bd9c65a0a2e92b32016845",
+      "url": "https://github.com/pulp-platform/tech_cells_generic",
+      "archive_sha256": "e89d929cef36a56478ba8ce457cfc9d98bf806c73bba1a8100b31718c409024e"
+    }
+  ],
+  "input_sha256": {
+    "src/backend/tpl/idma_backend.sv.tpl": "1929f71ea4f8267e1ff026f763ce8d6c1bd4f59a790aa24d543a022c35a662fd",
+    "src/backend/tpl/idma_legalizer.sv.tpl": "96ecd480041963a91910c5836ccf10de04f6367f64f2e4aa6bb89edc3eed7cc2",
+    "target/rtl/idma_backend_rw_axi.sv": "4ee1cc8e226a8306ea1a74c5c7a59377a08ea9731f8281da5d02943d82946b0b",
+    "target/rtl/idma_legalizer_rw_axi.sv": "e38fbd20b5e8527fab7d76551ef481c68ae5bd2b5ea91f11cf9b1cc6648de763",
+    "target/rtl/idma_transport_layer_rw_axi.sv": "634e4f441fc36d170d36ae23980a2f1d73c0e8e8c5011552a2ffa79ba5c7657e",
+    "test/tb_shared_axi.sv": "c7ad26f3eaca8fcb7f7afab717c7f2bc06b935af99b4bd94abe856928a0cc674",
+    "test/tb_coupled_axi_order.sv": "706ade2eb4946bd0227eaf47596794e50293f0727dc0b2d88ddfb541eabfcea9",
+    "Bender.lock": "9e6c33f898dad20fd1b29cf8b07647b7d55fe8b42c36bd5cd72586fc2606557e"
+  },
+  "lint": {
+    "normalized_diagnostics": 245,
+    "author_and_candidate_identical": true,
+    "normalization": "Source paths and source-line metadata only, including line fields in assertion expansion."
+  },
+  "generic_synthesis": {
+    "wrapper": "Official generated idma_backend_synth_rw_axi",
+    "configuration": "DataWidth64 AddrWidth32 UserWidth1 AxiIdWidth2 NumAxInFlight3 BufferDepth3 MemSysDepth0 CombinedShifter0 EnableCompute0 ErrorHandling0 RAWCouplingAvail1 HardwareLegalizer1",
+    "author_flipflops": 1528,
+    "candidate_flipflops": 1534,
+    "latches": 0,
+    "post_blackbox_cells": 0,
+    "post_unexplained_cells": 0,
+    "check_design_and_loops_pass": true,
+    "mapped_timing_or_area_claim": false
+  },
+  "generation": {
+    "target": "make idma_hw_all",
+    "identical_outputs": 74,
+    "changed_outputs": [
+      "target/rtl/idma_backend_rw_axi.sv",
+      "target/rtl/idma_legalizer_rw_axi.sv",
+      "target/rtl/idma_generated.sv"
+    ],
+    "corresponding_generated_tree_files": 77
+  },
+  "policy_note": "A same-edge AR/AW handshake is legal AXI. ORDER_POLICY rejection means only that the extra deadlock-free ordering policy requires a previously registered read permit.",
+  "tested_to_public_whitespace_mapping": [
+    {
+      "file": "test/tb_shared_axi.sv",
+      "tested_sha256": "c7ad26f3eaca8fcb7f7afab717c7f2bc06b935af99b4bd94abe856928a0cc674",
+      "public_sha256": "20477cfd745d5200e18bad95991c1444b7b47d0c6431c8299c7dabf5baea358f",
+      "change": "Remove one final empty line only.",
+      "non_whitespace_bytes_identical": true
+    },
+    {
+      "file": "test/tb_coupled_axi_order.sv",
+      "tested_sha256": "706ade2eb4946bd0227eaf47596794e50293f0727dc0b2d88ddfb541eabfcea9",
+      "public_sha256": "9adfb145b13eeab7c1e438dd5025b97f8c62e04c4bebddcb6136930cc06a684f",
+      "change": "Remove one final empty line only.",
+      "non_whitespace_bytes_identical": true
+    }
+  ],
+  "input_sha256_note": "The input_sha256 values are the bytes used in the 51 recorded runs. Public TB copies remove one final empty line only; see tested_to_public_whitespace_mapping. No test logic changed."
+}

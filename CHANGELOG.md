@@ -18,6 +18,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   flag bit 24, and `backend_options_t`. Requests with the mode off are still
   counted, so queued transfers can use different settings.
 
+### Fixed
+- In the single-pair AXI backend, require an earlier accepted-read permit for
+  each deadlock-free, RW-coupled write address, including AW-decoupled requests.
+  Keep the mode with each queued address.
+
 ## 0.7.4 - 2026-10-06
 
 MX changes the on-chip MX format and layout; MX has no production users yet, so they stay on 0.7.x.
